@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+   <h1>Bienvenu sur notre site</h1>
+   {% if not app.user %}
+      <a href="{{ path("security_login") }}" class="">Connexion</a>
+   {% else  %}
+      <a href="{{ path("security_logout") }}" class="">Déconnexion</a>
+   {% endif %}
+
+{% endblock %}
